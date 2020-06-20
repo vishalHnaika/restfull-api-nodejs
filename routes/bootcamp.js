@@ -1,24 +1,17 @@
 const express = require('express');
+const { getBootcamps, getBootcamp, createBootcamp, updateBootcamp, deleteBootcamp } = require('../Controllers/bootcamp');
 const router  = express.Router();
 
-router.get('/',(req, res ) => {
-    res.status(200).json( {status: true, msg: 'Show all Bootcamps' } );
-});
+/* We here had routed '/' which indicated the monted rourter '/api/V1/bootcamps' */
+router
+.route('/')
+.get(getBootcamps)
+.post(createBootcamp);
 
-router.get('/:id',(req, res ) => {
-    res.status(200).json({ status: true, msg: `Get Bootcamp ${req.params.id}` });
-});
-
-router.post('/',(req, res ) => {
-    res.status(200).json( {status: true, msg: 'Create new Bootcamps' } );
-});
-
-router.put('/:id',(req, res ) => {
-    res.status(200).json({ status: true, msg: `Update Bootcamps ${req.params.id}` });
-});
-
-router.delete('/:id',(req, res ) => {
-    res.status(200).json({ status: true, msg: `Delete Bootcamps ${req.params.id}` });
-});
+router
+.route('/:id')
+.get(getBootcamp)
+.put(updateBootcamp)
+.delete(deleteBootcamp);
 
 module.exports = router;

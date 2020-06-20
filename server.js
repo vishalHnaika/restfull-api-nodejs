@@ -8,6 +8,7 @@ const bootcamp = require('./routes/bootcamp');
 
 /* Load ENV variables */
 dotenv.config ( { path:'./config/config.env' } );
+
 const app = express();
 
 /* Mount Routers*/
