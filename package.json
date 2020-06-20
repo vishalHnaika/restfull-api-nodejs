@@ -1,0 +1,19 @@
+{
+  "name": "devcamper_api",
+  "version": "1.0.0",
+  "description": "This is project to learn about api creation",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=prodouction node server.js",
+    "dev":"nodemon server.js"
+  },
+  "author": "Bipin Singh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
