@@ -6,7 +6,7 @@
 exports.getBootcamps = ( req, res, next ) => {
     res
         .status(200)
-    .json({ status: true, msg: 'Show all Bootcamps' });
+        .json({ status: true, msg: 'Show all Bootcamps' });
 }
 
 /**
